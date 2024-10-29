@@ -75,7 +75,7 @@ class Codec {
     this.cname = null;
 
     this.dtx = false;
-    this.senderPaused = false;
+    this.pubPaused = false;
 
     this.reducedSize = true;
     this.mux = true;
@@ -91,7 +91,7 @@ class Codec {
 
   }
 
-  static create(rtpParameters,senderPaused) {
+  static create(rtpParameters, pubPaused) {
     const { codecs, headerExtensions, encodings, rtcp, mid } = JSON.parse(JSON.stringify(rtpParameters));
     let oldCodec = codecs[0];
     let newCodec = new Codec();
@@ -107,7 +107,7 @@ class Codec {
     newCodec.parameters = valueToStr(oldCodec.parameters);
     newCodec.rtcpFeedback = oldCodec.rtcpFeedback;
     newCodec.ssrc = encodings[0].ssrc;
-    newCodec.senderPaused = senderPaused;
+    newCodec.pubPaused = pubPaused;
 
     newCodec.mid = rtcp.mid;
     newCodec.mux = rtcp.mux;

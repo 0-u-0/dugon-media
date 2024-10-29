@@ -313,7 +313,7 @@ class Subscriber {
         paused: false
       });
     
-    //TODO: maintenance senderPaused by myself
+    //TODO: maintenance pubPaused by myself
     //TODO: use self random id
     this.codec = Codec.create(this.consumer.rtpParameters,this.consumer.producerPaused)
 
