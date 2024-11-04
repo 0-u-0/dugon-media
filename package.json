@@ -11,8 +11,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "koa": "^2.11.0",
-    "koa-router": "^8.0.8",
+    "@koa/router": "^13.1.0",
+    "koa": "^2.15.3",
     "koa-static": "^5.0.0",
     "log4js": "^6.9.1",
     "mediasoup": "^3.5.6",
