@@ -20,7 +20,7 @@ async function main() {
 
   logger.loadConfigure(Config.logLevel, Config.logToFile, Config.logFilePath, Config.logModule);
 
-  log.info(`Config -> ${logger.toLog(Config)}`);
+  log.info(`Config -> ${JSON.stringify(Config)}`);
   log.info(`Nats -> ${Config.nats.join(' ')}`);
   log.info(`UDP port range -> ${logger.toLog(Config.port)}`);
 
